@@ -1,14 +1,18 @@
-include <Servo.h>
+#include <Servo.h>
+
+Servo myServo;
 int ServoPin = 9;
 
 void setup() {
-Serial.begin(9600);
-Servo.attach(ServoPin);
-};
+  Serial.begin(9600);
+  myServo.attach(ServoPin);
+}
+
 void loop() {
-Servo.write(90);
-delay(50);
-Servo.write(180)
-delay(50)
-Servo.write(0)
+  myServo.write(90);
+  delay(50);
+  myServo.write(180);
+  delay(50);
+  myServo.write(0);
+  delay(50);
 }
